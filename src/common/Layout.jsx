@@ -34,7 +34,7 @@ export default function Layout() {
             },
             {
                 label: "Students",
-                path: "/admin/students",
+                path: "/admin/student",
                 icon: GraduationCap
             },
             {

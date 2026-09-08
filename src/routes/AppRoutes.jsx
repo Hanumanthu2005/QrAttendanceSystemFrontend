@@ -21,6 +21,11 @@ import StudentQR from "../pages/student/StudentQR";
 import FacultyAttendance from "../pages/faculty/FacultyAttendance";
 import FacultyReports from "../pages/faculty/FacultyReports";
 import StudentSummary from "../pages/student/StudentSummary";
+import AdminStudents from "../pages/admin/AdminStudents";
+import AdminFaculty from "../pages/admin/AdminFaculty";
+import AdminAttendance from "../pages/admin/AdminAttendance";
+import AdminSessions from "../pages/admin/AdminSessions";
+import Home from "../pages/home/Home";
 
 import ProtectedRoute from "./ProtectedRoute";
 import Layout from "../common/Layout";
@@ -32,10 +37,8 @@ export default function AppRoutes() {
 
             <Routes>
 
-                <Route
-                    path="/login"
-                    element={<Login />}
-                />
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
 
                 {/* ================= ADMIN ================= */}
 
@@ -54,6 +57,21 @@ export default function AppRoutes() {
                     <Route
                         path="/admin/student"
                         element={<AdminStudents />}
+                    />
+
+                    <Route
+                        path="/admin/faculty"
+                        element={<AdminFaculty />}
+                    />
+
+                    <Route
+                        path="/admin/attendance"
+                        element={<AdminAttendance />}
+                    />
+
+                    <Route
+                        path="/admin/sessions"
+                        element={<AdminSessions />}
                     />
                 </Route>
 
